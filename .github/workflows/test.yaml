@@ -2,16 +2,29 @@ name: Test
 
 on:
     pull_request: ~
-    push: ~
+    push:
+        branches:
+            - 'master'
     schedule:
         - cron: "0 0 * * *"
 
 jobs:
     test:
-        name: "Test"
-
+        name: "Test ${{ matrix.php-version }}"
         runs-on: ubuntu-latest
 
+        env:
+            GOODBY_CSV_TEST_DB_HOST_DEFAULT: "127.0.0.1"
+            GOODBY_CSV_TEST_DB_NAME_DEFAULT: "goodby_csv_test"
+            GOODBY_CSV_TEST_DB_USER_DEFAULT: "root"
+            GOODBY_CSV_TEST_DB_PASS_DEFAULT: "root"
+
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - php-version: '7.4'
+                    - php-version: '8.0'
         services:
             mysql:
                 image: mysql:5.7
@@ -28,7 +41,7 @@ jobs:
             - name: Install and configure PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: 7.4
+                  php-version: ${{ matrix.php-version }}
                   extensions: 'ctype, iconv'
                   tools: composer:v2
                   coverage: none

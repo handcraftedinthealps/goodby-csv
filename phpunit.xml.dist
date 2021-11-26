@@ -12,7 +12,7 @@
         <server name="GOODBY_CSV_TEST_DB_HOST_DEFAULT" value="127.0.0.1"/>
         <server name="GOODBY_CSV_TEST_DB_NAME_DEFAULT" value="goodby_csv_test"/>
         <server name="GOODBY_CSV_TEST_DB_USER_DEFAULT" value="root"/>
-        <server name="GOODBY_CSV_TEST_DB_PASS_DEFAULT" value="ChangeMe"/>
+        <server name="GOODBY_CSV_TEST_DB_PASS_DEFAULT" value="root"/>
     </php>
 
     <filter>
