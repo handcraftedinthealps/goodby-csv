@@ -14,7 +14,7 @@ class PdoCollectionTest extends TestCase
      */
     private $manager = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->manager = new DbManager();
 
@@ -28,7 +28,7 @@ class PdoCollectionTest extends TestCase
         $pdo->prepare("INSERT INTO collection_test VALUES(3, 'name')")->execute();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->manager);
     }

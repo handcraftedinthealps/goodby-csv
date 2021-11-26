@@ -20,7 +20,7 @@ class PdoObserverTest extends TestCase
      */
     private $manager = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->manager = new DbManager();
 
@@ -30,7 +30,7 @@ class PdoObserverTest extends TestCase
         $stmt->execute();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->manager);
     }

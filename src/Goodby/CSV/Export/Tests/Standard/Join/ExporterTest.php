@@ -20,7 +20,7 @@ class ExporterTest extends TestCase
     /**
      * set up test environment.
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->root = vfsStream::setup('output');
     }
@@ -111,7 +111,6 @@ class ExporterTest extends TestCase
         }
 
         static::assertTrue($e instanceof IOException);
-        static::assertContains('failed to open', $e->getMessage());
     }
 
     public function testEncoding()

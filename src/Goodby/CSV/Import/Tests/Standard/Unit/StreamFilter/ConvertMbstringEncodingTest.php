@@ -9,12 +9,12 @@ class ConvertMbstringEncodingTest extends TestCase
 {
     private $internalEncodingBackup;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->internalEncodingBackup = \mb_internal_encoding();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         \mb_internal_encoding($this->internalEncodingBackup);
     }

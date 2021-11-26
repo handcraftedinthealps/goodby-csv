@@ -18,7 +18,7 @@ class InterpreterTest extends TestCase
 
     private $expectedLine;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->expectedLine = null;
     }

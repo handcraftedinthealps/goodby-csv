@@ -23,7 +23,7 @@ class UsageTest extends TestCase
      */
     private $root;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->root = vfsStream::setup('output');
 
@@ -39,7 +39,7 @@ class UsageTest extends TestCase
         $pdo->prepare("INSERT INTO collection_test VALUES(3, 'name')")->execute();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->manager);
     }
