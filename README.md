@@ -1,6 +1,6 @@
 # Goodby, CSV
 
-[![Build Status](https://secure.travis-ci.org/goodby/csv.png?branch=master)](https://travis-ci.org/goodby/csv)
+> This is a fork of [goodby-csv](https://github.com/goodby/csv/) to add support for PHP 8.1.
 
 ## What is "Goodby CSV"?
 
@@ -37,8 +37,7 @@ Goodby CSV is fully unit-tested. The library is stable and ready to be used in l
 
 ## Requirements
 
-* PHP 5.3.2 or later
-* mbstring
+* PHP 7.2 or later
 
 ## Installation
 

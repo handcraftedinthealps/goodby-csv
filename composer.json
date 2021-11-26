@@ -1,5 +1,5 @@
 {
-    "name": "goodby/csv",
+    "name": "handcraftedinthealps/goodby-csv",
     "description": "CSV import/export library",
     "keywords": ["csv", "import", "export"],
     "homepage": "https://github.com/handcraftedinthealps/goodby-csv",
@@ -38,5 +38,8 @@
         "psr-0": {
             "Goodby\\CSV": "src/"
         }
+    },
+    "replace": {
+        "goodby/csv": "self.version"
     }
 }
