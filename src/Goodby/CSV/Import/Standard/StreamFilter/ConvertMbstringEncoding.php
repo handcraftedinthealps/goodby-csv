@@ -3,6 +3,7 @@
 namespace Goodby\CSV\Import\Standard\StreamFilter;
 
 use php_user_filter;
+use ReturnTypeWillChange;
 use RuntimeException;
 
 class ConvertMbstringEncoding extends php_user_filter
@@ -31,6 +32,7 @@ class ConvertMbstringEncoding extends php_user_filter
      * Return filter name
      * @return string
      */
+    #[ReturnTypeWillChange]
     public static function getFilterName()
     {
         return self::FILTER_NAMESPACE.'*';
@@ -40,6 +42,7 @@ class ConvertMbstringEncoding extends php_user_filter
      * Register this class as a stream filter
      * @throws \RuntimeException
      */
+    #[ReturnTypeWillChange]
     public static function register()
     {
         if ( self::$hasBeenRegistered === true ) {
@@ -60,6 +63,7 @@ class ConvertMbstringEncoding extends php_user_filter
      * @param string $toCharset
      * @return string
      */
+    #[ReturnTypeWillChange]
     public static function getFilterURL($filename, $fromCharset, $toCharset = null)
     {
         if ( $toCharset === null ) {
@@ -72,6 +76,7 @@ class ConvertMbstringEncoding extends php_user_filter
     /**
      * @return bool
      */
+    #[ReturnTypeWillChange]
     public function onCreate()
     {
         if ( strpos($this->filtername, self::FILTER_NAMESPACE) !== 0 ) {
@@ -97,6 +102,7 @@ class ConvertMbstringEncoding extends php_user_filter
      * @param $closing
      * @return int
      */
+    #[ReturnTypeWillChange]
     public function filter($in, $out, &$consumed, $closing)
     {
         while ( $bucket = stream_bucket_make_writeable($in) ) {

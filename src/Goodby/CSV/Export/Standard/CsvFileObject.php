@@ -2,6 +2,7 @@
 
 namespace Goodby\CSV\Export\Standard;
 
+use ReturnTypeWillChange;
 use SplFileObject;
 
 class CsvFileObject extends SplFileObject

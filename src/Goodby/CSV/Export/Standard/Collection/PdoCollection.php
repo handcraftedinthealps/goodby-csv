@@ -4,6 +4,7 @@ namespace Goodby\CSV\Export\Standard\Collection;
 
 use Iterator;
 use PDO;
+use ReturnTypeWillChange;
 
 class PdoCollection implements Iterator
 {
@@ -29,6 +30,7 @@ class PdoCollection implements Iterator
      * @link http://php.net/manual/en/iterator.current.php
      * @return mixed Can return any type.
      */
+    #[ReturnTypeWillChange]
     public function current()
     {
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
@@ -40,6 +42,7 @@ class PdoCollection implements Iterator
      * @link http://php.net/manual/en/iterator.next.php
      * @return void Any returned value is ignored.
      */
+    #[ReturnTypeWillChange]
     public function next()
     {
         $this->current++;
@@ -51,6 +54,7 @@ class PdoCollection implements Iterator
      * @link http://php.net/manual/en/iterator.key.php
      * @return mixed scalar on success, or null on failure.
      */
+    #[ReturnTypeWillChange]
     public function key()
     {
         $this->current;
@@ -63,6 +67,7 @@ class PdoCollection implements Iterator
      * @return boolean The return value will be casted to boolean and then evaluated.
      * Returns true on success or false on failure.
      */
+    #[ReturnTypeWillChange]
     public function valid()
     {
         return ($this->rowCount > $this->current);
@@ -74,6 +79,7 @@ class PdoCollection implements Iterator
      * @link http://php.net/manual/en/iterator.rewind.php
      * @return void Any returned value is ignored.
      */
+    #[ReturnTypeWillChange]
     public function rewind()
     {
         $this->stmt->execute();

@@ -61,7 +61,7 @@ class Exporter implements ExporterInterface
         try {
             $csv = new CsvFileObject($filename, $fileMode);
         } catch ( \Exception $e ) {
-            throw new IOException($e->getMessage(), null, $e);
+            throw new IOException($e->getMessage(), 0, $e);
         }
 
         $csv->setNewline($newline);

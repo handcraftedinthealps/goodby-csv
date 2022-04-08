@@ -3,8 +3,10 @@
 namespace Goodby\CSV\Export\Tests\Standard\Unit\Collection;
 
 use ArrayIterator;
+use IteratorAggregate;
+use Traversable;
 
-class SampleAggIterator implements \IteratorAggregate
+class SampleAggIterator implements IteratorAggregate
 {
     protected $data;
 
@@ -13,7 +15,7 @@ class SampleAggIterator implements \IteratorAggregate
         $this->data = $data;
     }
 
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->data);
     }
