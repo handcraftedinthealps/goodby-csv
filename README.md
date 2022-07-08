@@ -41,26 +41,10 @@ Goodby CSV is fully unit-tested. The library is stable and ready to be used in l
 
 ## Installation
 
-Install composer in your project:
+Install the package via [composer](https://getcomposer.org/):
 
 ```bash
-curl -s http://getcomposer.org/installer | php
-```
-
-Create a `composer.json` file in your project root:
-
-```json
-{
-    "require": {
-        "goodby/csv": "*"
-    }
-}
-```
-
-Install via composer:
-
-```bash
-php composer.phar install
+composer require handcraftedinthealps/goodby-csv
 ```
 
 ## Documentation
