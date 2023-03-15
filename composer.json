@@ -33,11 +33,24 @@
         "mockery/mockery": "^1.0",
         "suin/php-expose": "^1.0",
         "mikey179/vfsstream": "^1.1",
-        "rector/rector": "^0.12.5"
+        "rector/rector": "^0.12.5",
+        "phpspec/prophecy": "^1.14"
     },
     "autoload": {
         "psr-0": {
             "Goodby\\CSV": "src/"
+        },
+        "exclude-from-classmap": [
+            "/src/Goodby/CSV/Export/Tests/",
+            "/src/Goodby/CSV/Import/Tests/",
+            "/src/Goodby/CSV/TestHelper/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Goodby\\CSV\\Export\\Tests\\": "src/Goodby/CSV/Export/Tests/",
+            "Goodby\\CSV\\Import\\Tests\\": "src/Goodby/CSV/Import/Tests/",
+            "Goodby\\CSV\\TestHelper\\": "src/Goodby/CSV/TestHelper/"
         }
     },
     "replace": {
