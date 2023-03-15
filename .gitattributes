@@ -1,0 +1,7 @@
+/src/Goodby/CSV/Export/Tests export-ignore
+/src/Goodby/CSV/Import/Tests export-ignore
+/src/Goodby/CSV/TestHelper export-ignore
+/php-cs-fixer.dist.php export-ignore
+/phpunit.xml.dist export-ignore
+/phpunit-bootstrap.php export-ignore
+/rector.php export-ignore
