@@ -33,8 +33,6 @@ class Lexer implements LexerInterface
      */
     public function parse($filename, InterpreterInterface $interpreter)
     {
-        @ini_set('auto_detect_line_endings', true); // For mac's office excel csv
-
         $delimiter      = $this->config->getDelimiter();
         $enclosure      = $this->config->getEnclosure();
         $escape         = $this->config->getEscape();
