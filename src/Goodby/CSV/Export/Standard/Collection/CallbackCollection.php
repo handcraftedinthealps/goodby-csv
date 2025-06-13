@@ -91,4 +91,8 @@ class CallbackCollection implements Iterator
     {
         $this->data->rewind();
     }
+
+    public function __wakeup() {
+        throw new \BadMethodCallException('Cannot unserialize ' . __CLASS__);
+    }
 }
